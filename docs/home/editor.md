@@ -7,52 +7,19 @@ demo:
   cols: 1
 ---
 
-```jsx
-/**
- * iframe: true 
- */
+# 预览
 
-import { 
-    EditorRender, 
-    Editor,
-} from 'moki-editor';
-import {  
-    Bold,
-    Italic,
-    Underline,
-    Strike,
-    Blockquote,
-    InLineCode,
-    Subscript,
-    Superscript,
-    TextAlign,
-    BulletList,
-    ListItem, 
-} from "moki-editor/dist/extensions"
+目前内置的插件已全局展示，可不必传入<code>extenisons</code>
 
-const EditorPage = () => {
-    const [editor, setEditor] = useState<Editor | null>(null);
-    
-    return (
-        <EditorRender
-            ref={setEditor}
-            extensions={[
-                Bold,
-                Italic,
-                Underline,
-                Strike,
-                Blockquote,
-                InLineCode,
-                Subscript,
-                Superscript,
-                TextAlign.configure({
-                    types: ['heading', 'paragraph'],
-                }),
-                ListItem,
-                BulletList,
-              ]}
-        />
-    )
-}
-export default EditorRender;
-```
+<code src="../../test/editor/index.tsx"></code>
+
+| 属性                         | 描述       | 类型                                   | 默认值              |
+|----------------------------|----------|--------------------------------------|------------------|
+| ref                        | Editor   | `Editor/null`                        | /                |
+| content                    | 编辑器内容    | `string/null`                        | null             |
+| editable                   | 是否可以编辑   | `Boolean`                            | true             |
+| extensions                 | 插件配置     | `Array<AnyExtension/AnyExtension[]>` | []    |
+| isToolBar                | 是否展示工具栏  | `Boolean`                            | true             |
+| autofocus                  | 是否聚焦     | `Boolean`                            | true             |
+| children                      | 自定义工具栏内容 | `React.ReactNode`                    | /                |
+

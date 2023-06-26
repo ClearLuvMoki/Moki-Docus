@@ -28,7 +28,7 @@
     "dumi": "^2.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
-    "moki-editor": "^0.1.1",
+    "moki-editor": "^0.2.1",
     "prettier": "^2.8.8"
   }
 }
